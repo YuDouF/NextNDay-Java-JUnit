@@ -16,7 +16,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Main {
     public static void main(String[] args) throws IOException {
 
-        String fileName="E:\\Project\\cases.xlsx";
+        String fileName="E:\\Project\\Java\\NextNDay-Java-JUnit\\Test\\cases\\Cases-薛琪品.xlsx";
         FileInputStream fis = new FileInputStream(fileName);
         Workbook workbook = null;
         //判断excel的两种格式xls,xlsx

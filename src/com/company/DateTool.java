@@ -177,7 +177,11 @@ public class DateTool {
             if (year == begin.getYear()) {	//说明begin的年份比end的年份少1
                 int temp = (end.getMonth() + 12 - begin.getMonth()) / 2;
                 if (temp == 0) {	//说明begin为12月，end为1月
-                    day += (getMonthDayLength(begin) - begin.getDay() + end.getDay()) / 2;
+                    long tempDay = (getMonthDayLength(begin) - begin.getDay() + end.getDay()) / 2;
+                    if(tempDay == 0){
+                        tempDay++;
+                    }
+                    day += tempDay;
                     if (day > 31) {
                         day -= 31;
                         temp = 1;
